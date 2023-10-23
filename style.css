@@ -6,23 +6,23 @@
 }
 /* background animation */
 body{
-     /* Source: Manuel Pinto */
+  /* Source: Manuel Pinto */
 background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 background-size: 400% 400%;
 animation: gradient 15s ease infinite;
 height: 100vh;
-  font-family: 'Josefin Sans', sans-serif;
-  font-family: 'Press Start 2P', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Press Start 2P', cursive;
 }
 @keyframes gradient {
 0% {
-  background-position: 0% 50%;
+background-position: 0% 50%;
 }
 50% {
-  background-position: 100% 50%;
+background-position: 100% 50%;
 }
 100% {
-  background-position: 0% 50%;
+background-position: 0% 50%;
 }
 }
 @-webkit-keyframes honeycomb {
@@ -30,16 +30,16 @@ height: 100vh;
 20%,
 80%,
 100% {
-  opacity: 0;
-  -webkit-transform: scale(0);
-  transform: scale(0);
+opacity: 0;
+-webkit-transform: scale(0);
+transform: scale(0);
 }
 
 30%,
 70% {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+opacity: 1;
+-webkit-transform: scale(1);
+transform: scale(1);
 }
 }
 
@@ -71,6 +71,7 @@ height: 100vh;
   font-family: inherit;
   font-size: 12px;
   font-weight: 500;
+  font-family: 'Playpen Sans', cursive;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   color: #7e97b8;
@@ -209,6 +210,7 @@ height: 100vh;
     background: rgb(61, 56, 56);
     font-weight: bolder;
     font-size:16px;
+    font-family: 'Playpen Sans', cursive;
    }
    
    .input:active {
@@ -357,5 +359,52 @@ height: 100vh;
   .p1 img:hover{
     transform: scale(1.2);
   }
-  
-   
+  #toasts{
+    position: fixed;
+   top: 10px;
+   right: 10px; 
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+  }
+    /* toast notification */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .toast {
+    background-color: #7752FE;
+    color: white;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    animation: fadeIn 2s;
+font-family: 'Playpen Sans', cursive;
+  }
+  .toast.success {
+  background-color: green;
+  }
+  .toast.fail {
+    background-color: red;
+    }
+  @media screen and (max-width: 768px){
+    #default-img {
+      height: 300px;
+      width: 300px;
+      padding: 14px;
+      border-radius: 40px;
+      margin-bottom: 8px;
+  }
+  .input {
+    width: 250px;
+    height: 40px;
+    /* color: #8707ff;
+    border: 2px solid #8707ff;
+    border-radius: 16px;
+    padding: 10px 25px;
+    background: rgb(61, 56, 56);
+    font-weight: bolder;
+    font-size: 16px; */
+}
+  }
